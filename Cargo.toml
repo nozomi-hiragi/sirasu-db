@@ -1,0 +1,26 @@
+[package]
+edition = "2021"
+name = "sirasu-db"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "4.1.0"
+argon2 = "0.4.0"
+async-graphql = {version = '4.0.0', features = ["bson", "chrono"]}
+async-graphql-actix-web = "4.0.3"
+chrono = "0.4.19"
+dotenv = "0.15.0"
+jsonwebtoken = "8.1.1"
+once_cell = "1.12.0"
+password-hash = "0.4.1"
+pbkdf2 = "0.11.0"
+rand = "0.8.5"
+scrypt = "0.10.0"
+serde = "1.0.137"
+
+[dependencies.mongodb]
+default-features = false
+features = ["sync", "bson-chrono-0_4"]
+version = "2.2.0"
